@@ -5,10 +5,10 @@ MobileNet : Object Detector released in 2017 as an efficient CNN architecture de
 
 ### Introduction
 
-**SSD_mobilenet_v1_coco** was described in here (https://docs.openvinotoolkit.org/latest/omz_models_model_ssd_mobilenet_v1_coco.html)
+**SSD_mobilenet_v1_coco** was described in [Here](https://docs.openvinotoolkit.org/latest/omz_models_model_ssd_mobilenet_v1_coco.html)
 
 This code has been tested on Windows 10 64-bit, and on Colaboratory and
-initially described in [Here] (https://github.com/tensorflow/models/tree/991f75e200721267302291862cd9bf936ca06f90/research/object_detection).
+initially described in [Here](https://github.com/tensorflow/models/tree/991f75e200721267302291862cd9bf936ca06f90/research/object_detection).
 
 Model is available at [Here](https://github.com/tensorflow/models).
 TestData is available at [Here](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz).
