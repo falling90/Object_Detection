@@ -39,14 +39,16 @@ a
 	[<tf.Tensor 'image_tensor:0' shape=(None, None, None, 3) dtype=uint8>]
 	```
 
-    - Output_dtypes
+    - Output Dtypes
+	```Shell
 	detection_boxes': tf.float32,
 	detection_classes': tf.float32,
 	detection_scores': tf.float32,
 	num_detections': tf.float32
 	```
 
-    - Output_shapes
+    - Output Shapes
+	```Shell
 	detection_boxes': TensorShape([None, 100, 4],
 	detection_classes': TensorShape([None, 100]
 	detection_scores': TensorShape([None, 100],
