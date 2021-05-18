@@ -38,7 +38,9 @@ It doesn't included any training data (Trained Model included in TestData)
 ### Testing Demo:
 1.	Detection_model
     - Label Category
-| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:|
+
+|                |                |                |                |                |                |                |                |                |                |
+|  ------------- | :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:|
 | Airplane       | Apple          | Backpack       | Banana         | Baseball bat   | Baseball glove | Bear           | Bed            | Bench          | Bicycle        |
 | Bird           | Boat           | Book           | Bottle         | Bowl           | Broccoli       | Bus            | Cake           | Car            | Carrot         |
 | Cat            | Cell phone     | Chair          | Clock          | Couch          | Cow            | Cup            | Dining table   | Dog            | Donut          |
