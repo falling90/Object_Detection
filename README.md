@@ -1,6 +1,7 @@
 # Object Detection API : ssd_mobilenet_v1_coco
 
 SSD : Single Shot MultiBox Detector
+
 MobileNet : Object Detector released in 2017 as an efficient CNN architecture designed for mobile and embedded vision application
 
 ### Introduction
