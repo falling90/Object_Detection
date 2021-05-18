@@ -20,14 +20,10 @@ It doesn't included any training data (Trained Model included in TestData)
 ### Main Results
 a
 
-
-
 ### Contents
 
 1. [Requirements: software](#requirements-software)
 2. [Testing Demo](#testing-demo)
-3. [Resources](#resources)
-
 
 ### Requirements: software
 
@@ -42,7 +38,6 @@ a
 	```Shell
 	[<tf.Tensor 'image_tensor:0' shape=(None, None, None, 3) dtype=uint8>]
 	```
-	and with ZF net:
 
     - Output_dtypes
 	detection_boxes': tf.float32,
@@ -50,6 +45,7 @@ a
 	detection_scores': tf.float32,
 	num_detections': tf.float32
 	```
+
     - Output_shapes
 	detection_boxes': TensorShape([None, 100, 4],
 	detection_classes': TensorShape([None, 100]
