@@ -60,13 +60,22 @@ It doesn't included any training data (Trained Model included in TestData)
 
     - Label Category
 
-|                |                |                |                |                |                |                |                |                |                |
-| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:|
-| Airplane       | Apple          | Backpack       | Banana         | Baseball bat   | Baseball glove | Bear           | Bed            | Bench          | Bicycle        |
-| Bird           | Boat           | Book           | Bottle         | Bowl           | Broccoli       | Bus            | Cake           | Car            | Carrot         |
-| Cat            | Cell phone     | Chair          | Clock          | Couch          | Cow            | Cup            | Dining table   | **Dog**            | Donut          |
-| Elephant       | Fire hydrant   | Fork           | Frisbee        | Giraffe        | Hair drier     | Handbag        | Horse          | Hot dog        | Keyboard       |
-| **Kite**           | Knife          | Laptop         | Microwave      | Motorcycle     | Mouse          | Orange         | Oven           | Parking meter  | **Person**         |
-| Pizza          | Potted plant   | Refrigerator   | Remote         | Sandwich       | Scissors       | Sheep          | Sink           | Skateboard     | Skis           |
-| Snowboard      | Spoon          | Sports ball    | Stop sign      | Suitcase       | Surfboard      | Teddy bear     | Tennis racket  | Tie            | Toaster        |
-| Toilet         | Toothbrush     | Traffic light  | Train          | Truck          | TV             | Umbrella       | Vase           | Wine glass     | Zebra          |
+|                |                |                |                |                |
+| :-------------:| :-------------:| :-------------:| :-------------:| :-------------:|
+| Airplane       | Apple          | Backpack       | Banana         | Baseball bat   |
+| Baseball glove | Bear           | Bed            | Bench          | Bicycle        |
+| Bird           | Boat           | Book           | Bottle         | Bowl           |
+| Broccoli       | Bus            | Cake           | Car            | Carrot         |
+| Cat            | Cell phone     | Chair          | Clock          | Couch          |
+| Cow            | Cup            | Dining table   | **Dog**            | Donut          |
+| Elephant       | Fire hydrant   | Fork           | Frisbee        | Giraffe        |
+| Hair drier     | Handbag        | Horse          | Hot dog        | Keyboard       |
+| **Kite**           | Knife          | Laptop         | Microwave      | Motorcycle     |
+| Mouse          | Orange         | Oven           | Parking meter  | **Person**         |
+| Pizza          | Potted plant   | Refrigerator   | Remote         | Sandwich       |
+| Scissors       | Sheep          | Sink           | Skateboard     | Skis           |
+| Snowboard      | Spoon          | Sports ball    | Stop sign      | Suitcase       |
+| Surfboard      | Teddy bear     | Tennis racket  | Tie            | Toaster        |
+| Toilet         | Toothbrush     | Traffic light  | Train          | Truck          |
+| TV             | Umbrella       | Vase           | Wine glass     | Zebra          |
+
