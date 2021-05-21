@@ -23,32 +23,26 @@
     - Object Detection 속도 자체가 느림.
     - Selective Search 를 통한 검출된 Region Proposals 마다 CNN을 적용하기때문에 시간 多 소요.
     - 합성곱 신경망(CNN) 입력을 위해 고정된 크기로 변환(Warp/Crop) 하는 과정에서 Image 정보 손실 발생
-    - 학습이 여러 단계로 이루어져 긴 학습시간과 대용량 저장공간 必.
+    - 학습이 여러 단계로 이루어져 긴 학습시간과 대용량 저장공간 필요함.
 
 
 ## SPPnet
 >**SPPnet Algorithms**
 
-    ```
     - SPP 활용을 통해 R-CNN의 느린 속도 개선(학습 : 3배, 실적용 : 10~100배)
-    ```
+    - R-CNN과 같은 구조로 여러 학습 단계가 적용되어야 하고 대용량 저장 공간 필요함.
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/1.PNG" width="800px" height="500px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/2.PNG" width="800px" height="500px"></img><br/>  
-----------------------------------------------------------------------------------------------------------------------------------------  
+
+>**R-CNN vs SPPnet**
+
+    - SPP(Spatial Pyramid Pooling)을 통해 합성곱 신경망(CNN) 계산을 한번만 한다.
+
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/3.PNG" width="800px" height="500px"></img><br/>  
-
->**SPPnet 단점**
-
-- Object Detection 속도 자체가 느림.
-
-- Selective Search 를 통한 검출된 Region Proposals 마다 CNN을 적용하기때문에 시간 多 소요.
-
-- 합성곱 신경망(CNN) 입력을 위해 고정된 크기로 변환(Warp/Crop) 하는 과정에서 Image 정보 손실 발생
-
-- 학습이 여러 단계로 이루어져 긴 학습시간과 대용량 저장공간 必.
-
+----------------------------------------------------------------------------------------------------------------------------------------  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/4.PNG" width="800px" height="500px"></img><br/>  
 
 
 ### Main Results
