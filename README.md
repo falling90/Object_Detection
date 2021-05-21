@@ -92,3 +92,51 @@
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.PNG" width="800px" height="300px"></img><br/>  
+
+>**Fast R-CNN 한계**
+    
+    -. Region Proposal 단계가 대부분의 시간을 차지하기 때문에 Testing 단계에서 여전히 느림.
+
+## Faster R-CNN
+>**Faster R-CNN Algorithms**
+
+    -. Region Proposal에 신경망을 적용[RPN(Region Proposal Network)]하여 시간 단축 (CPU → GPU)
+    -. Region-Based 감지기의 Feature Map을 Region-Proposal Generating 에도 사용
+        - 전체 Image를 Convolutional Network 하여 만들어낸 Feature Map을 Region-Proposal Generating 에서 활용
+    -. RPN은 End to End로 학습 가능
+    -. Object여부와 Bounding Box를 Regress하는 하나의 FCN
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
+
+    * ROI Pooling Layer : ROI 영역에 해당하는 부분만 Max Pooling을 통해 Feature Map으로부터 고정된 길이의 저차원 벡터로 축소
+        - 각각의 ROI 는 (r, c, h, w)의 튜플 형태 [(r, c) : Top-Left Corner의 좌표]
+        - h*w ROI 사이즈를 H*W의 작은 윈도우 사이즈로 나눔 (h/H * w/W)
+        - SPPnet의 SPP Layer의 한 Pyramid Level 만 사용하는 형태는 동일
+        
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
+----------------------------------------------------------------------------------------------------------------------------------------  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
+
+    * 학습 : 기본적으로 ImageNet을 사용한 Pre-Trained Network Base로 진행
+    * 변경점
+        - 마지막 Max Pooling Layer → ROI Pooling Layer로 대체(VGG16에서는 H=W=7)
+        - 신경망의 마지막 FC Layer와 Softmax단이 두 개의 Output Layer로 대체(ImageNet : 1000개 분류)
+        - 신경망의 입력이 Image와 ROI를 반영할 수 있도록 변경
+
+>**Fast R-CNN vs Faster R-CNN**
+    
+    -. Region-wise Sampling → Hierarchical Sampling
+        - SGD 미니배치가 Image에 종속됨(N개의 이미지를 각 R/N ROI개로)
+        - N=2, R=128로도 좋은 학습 결과 확인
+        - 약 64배 빠른 학습 가능(N 이 작을수록 계산복잡도 낮아짐)
+    -. SPP Layer → ROI Pooling Layer
+    -. Single-Stage(Multi-Task)
+        - 최종 Classifier와 Regression까지 단방향 단계 [→ 효율적인 학습 (Softmax Classifier + Bounding Box Regressor)]
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
+----------------------------------------------------------------------------------------------------------------------------------------  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="800px" height="300px"></img><br/>  
+
+>**Faster R-CNN 한계**
+    
+    -. Region Proposal 단계가 대부분의 시간을 차지하기 때문에 Testing 단계에서 여전히 느림.
