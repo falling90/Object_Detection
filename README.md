@@ -146,6 +146,13 @@
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/6.PNG" width="800px" height="200px"></img><br/>  
 
+    * 학습
+        - RPN은 Imagenet을 사용하여 학습된 모델로부터 초기화되고, Region Proposal Task를 위해 End to End 학습
+        - 위 단계에서 학습된 RPN을 사용하여 Fast R-CNN 모델의 학습을 진행한다.(초기화는 ImageNet 학습 모델로)
+        - RPN을 다시 한번 학습하는데 공통된 Conv Layer(Fully Convolutional Features)는 고정하고 RPN에만 연결된 층만 학습
+        - 공유된 Conv Layer를 고정시키고, Fast R-CNN을 다시 학습한다.
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
+
 
 >**Fast R-CNN vs Faster R-CNN**
     
