@@ -104,12 +104,12 @@
     -. RPN은 End to End로 학습 가능
     -. Object여부와 Bounding Box를 Regress하는 하나의 FCN
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/1.PNG" width="800px" height="300px"></img><br/>  
 
     * 
         - 
         
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="200px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
 
@@ -129,4 +129,4 @@
     -. Region Proposal 단계가 대부분의 시간을 차지하기 때문에 Testing 단계에서 여전히 느림.
 
 ## OverView
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/9.PNG" width="800px" height="100px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/9.png" width="800px" height="150px"></img><br/>  
