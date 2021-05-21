@@ -89,7 +89,7 @@
     -. Single-Stage(Multi-Task)
         - 최종 Classifier와 Regression까지 단방향 단계 [→ 효율적인 학습 (Softmax Classifier + Bounding Box Regressor)]
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="800px" height="400px"></img><br/>  
 
 >**Fast R-CNN 한계**
     
