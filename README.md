@@ -8,9 +8,9 @@
 ### R-CNN
 >**R-CNN Algorithms**
 
-![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result1.png?raw=true)
-![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result2.png?raw=true)
-![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result3.png?raw=true)
+![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Images/R-CNN/1.PNG?raw=true)
+![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Images/R-CNN/2.PNG?raw=true)
+![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Images/R-CNN/3.PNG?raw=true)
 
 
 >**R-CNN 한계**
