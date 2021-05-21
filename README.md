@@ -40,9 +40,9 @@
 
     -. Spatial Pyramid Pooling(SPP)을 통해 합성곱 신경망(CNN) 계산을 한번만 한다.
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/3.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/3.PNG" width="800px" height="200px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/4.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/4.PNG" width="800px" height="300px"></img><br/>  
 
 
 ### Main Results
