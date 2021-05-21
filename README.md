@@ -29,7 +29,7 @@
 ## SPPnet
 >**SPPnet Algorithms**
 
-    -. SPP 활용을 통해 R-CNN의 느린 속도 개선(학습 : 3배, 실적용 : 10~100배)
+    -. Spatial Pyramid Pooling(SPP) 활용을 통해 R-CNN의 느린 속도 개선(학습 : 3배, 실적용 : 10~100배)
     -. R-CNN과 같은 구조로 여러 학습 단계가 적용되어야 하고 대용량 저장 공간 필요함.
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/1.PNG" width="800px" height="500px"></img><br/>  
