@@ -12,9 +12,9 @@
     2. Selective Search 을 통해 약 2,000 여개의 Region Proposal 진행
     3. 각 Region 別 Crop & Warp 진행(※ CNN 입력을 위해서 고정된 크기로 변환 필요)
     4. 각각 CNN 적용을 통해 Feature Map 생성
-    5. 추출된 Feature Map 을 Classifiers(SVM)을 통해 분류한다.
+    5. 추출된 Feature Map 은 Classifiers(SVM)을 통해 분류한다.
     
-    *. 학습 : 세 단계로 진행 (Conv Fine Tune → SVM Classification → BB Regression)
+    * 학습 : 세 단계로 진행 (Conv Fine Tune → SVM Classification → BB Regression)
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/1.PNG" width="800px" height="300px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
