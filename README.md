@@ -156,15 +156,8 @@
 
 >**Fast R-CNN vs Faster R-CNN**
     
-    -. 
-
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
-----------------------------------------------------------------------------------------------------------------------------------------  
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="800px" height="300px"></img><br/>  
-
->**Faster R-CNN 한계**
-    
-    -. Region Proposal 단계가 대부분의 시간을 차지하기 때문에 Testing 단계에서 여전히 느림.
+    -. RPN(Region Proposal Network)를 통해 Cost-Free한 Region Proposal 방법론 제안
+    -. 빠른 속도와 높은 정확도의 Object Detection을 이루어냄.
 
 ## OverView
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/9.png" width="800px" height="150px"></img><br/>  
