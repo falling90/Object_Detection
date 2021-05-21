@@ -66,8 +66,7 @@
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
 
-    * ROI Pooling Layer
-        - ROI 영역에 해당하는 부분만 Max Pooling을 통해 Feature Map으로부터 고정된 길이의 저차원 벡터로 축소
+    * ROI Pooling Layer : ROI 영역에 해당하는 부분만 Max Pooling을 통해 Feature Map으로부터 고정된 길이의 저차원 벡터로 축소
         - 각각의 ROI 는 (r, c, h, w)의 튜플 형태 [(r, c) : Top-Left Corner의 좌표]
         - h*w ROI 사이즈를 H*W의 작은 윈도우 사이즈로 나눔 (h/H * w/W)
         - SPPnet의 SPP Layer의 한 Pyramid Level 만 사용하는 형태는 동일
@@ -76,9 +75,15 @@
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
 
->**R-CNN vs SPPnet**
+    * 학습 : 기본적으로 ImageNet을 사용한 Pre-Trained Network Base로 진행
+    * 학습을 위한 변경점
+        - 마지막 Max Pooling Layer → ROI Pooling Layer로 대체(VGG16에서는 H=W=7)
+        - 신경망의 마지막 FC Layer와 Softmax단이 두 개의 Output Layer로 대체(ImageNet : 1000개 분류)
+        - 신경망의 입력이 Image와 ROI를 반영할 수 있도록 변경
 
-    -. Spatial Pyramid Pooling(SPP)을 통해 합성곱 신경망(CNN) 계산을 한번만 한다.
+>**R-CNN & SPPnet vs Fast R-CNN**
+
+    -. One-Stage 구조를 통한 효율적인 학습(Softmax Classifier + Bounding Box Regressor)
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
