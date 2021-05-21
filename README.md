@@ -2,7 +2,7 @@
 
 >**발전 과정**
 
-- R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
+    - R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
    
 
 ## R-CNN
@@ -20,13 +20,10 @@
 
 >**R-CNN 단점**
 
-- Object Detection 속도 자체가 느림.
-
-- Selective Search 를 통한 검출된 Region Proposals 마다 CNN을 적용하기때문에 시간 多 소요.
-
-- 합성곱 신경망(CNN) 입력을 위해 고정된 크기로 변환(Warp/Crop) 하는 과정에서 Image 정보 손실 발생
-
-- 학습이 여러 단계로 이루어져 긴 학습시간과 대용량 저장공간 必.
+    - Object Detection 속도 자체가 느림.
+    - Selective Search 를 통한 검출된 Region Proposals 마다 CNN을 적용하기때문에 시간 多 소요.
+    - 합성곱 신경망(CNN) 입력을 위해 고정된 크기로 변환(Warp/Crop) 하는 과정에서 Image 정보 손실 발생
+    - 학습이 여러 단계로 이루어져 긴 학습시간과 대용량 저장공간 必.
 
 
 ## SPPnet
