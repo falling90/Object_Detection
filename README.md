@@ -111,7 +111,7 @@
         - h*w ROI 사이즈를 H*W의 작은 윈도우 사이즈로 나눔 (h/H * w/W)
         - SPPnet의 SPP Layer의 한 Pyramid Level 만 사용하는 형태는 동일
         
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="200px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
 
