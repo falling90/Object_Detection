@@ -126,8 +126,26 @@
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
 
-    * 
-        - 
+    * NMS(Non Maximum Suppression) : 가장 확실한 박스 선정
+        - 생성된 Anchor Box 에서 NMS을 사용하여 약 2000개의 ROI 생성
+        - 2000개의 후보 영역 중 Sampling을 통해 Proposal을 뽑아 Fast R-CNN Detector로 보내 학습 진행
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="300px" height="400px"></img><br/>  
+
+    * Translation-Invariant(이동불변성) Anchors
+        - RPN에서 Window Size를 Sliding 하는 방식은 이동 불변성 보장
+        - CNN에서 Window Sliding을 사용하여 Convolution 하였을때 얻는 효과와 동일
+        - Model Size를 줄여준다.((4+1)*800 vs (4+2)*9) → 연산량 절감
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/5.PNG" width="800px" height="200px"></img><br/>  
+
+    * Multi-Scale Anchors as Regression References
+        - Anchors Box의 Hyper Parameter를 다양하게 둠으로써, 다양한 이미지 or 필터를 사용한 것과 동일한 효과
+        - Pyramid of Anchors
+        - 다양한 Scale과 Ratio를 활용한 Anchor를 통해 효율적으로 계산 가능
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/6.PNG" width="800px" height="200px"></img><br/>  
+
 
 >**Fast R-CNN vs Faster R-CNN**
     
