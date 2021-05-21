@@ -89,7 +89,7 @@
     -. Single-Stage(Multi-Task)
         - 최종 Classifier와 Regression까지 단방향 단계 [→ 효율적인 학습 (Softmax Classifier + Bounding Box Regressor)]
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="800px" height="400px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="800px" height="350px"></img><br/>  
 
 >**Fast R-CNN 한계**
     
@@ -151,7 +151,7 @@
         - 위 단계에서 학습된 RPN을 사용하여 Fast R-CNN 모델의 학습을 진행한다.(초기화는 ImageNet 학습 모델로)
         - RPN을 다시 한번 학습하는데 공통된 Conv Layer(Fully Convolutional Features)는 고정하고 RPN에만 연결된 층만 학습
         - 공유된 Conv Layer를 고정시키고, Fast R-CNN을 다시 학습한다.
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/7.png" width="800px" height="400px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/7.png" width="800px" height="300px"></img><br/>  
 
 
 >**Fast R-CNN vs Faster R-CNN**
