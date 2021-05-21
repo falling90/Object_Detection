@@ -8,12 +8,12 @@
 ## R-CNN
 >**R-CNN Algorithms**
 
-    -.
-    
-	
+    -. Selective Search 을 통해 약 2,000 여개의 Region Proposal 진행
+    -. 세 단계로 학습 진행 (Conv Fine Tune → SVM Classification → BB Regression)
+
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/2.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/3.PNG" width="800px" height="500px"></img><br/>  
 
@@ -34,13 +34,13 @@
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/1.PNG" width="800px" height="500px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/2.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/2.PNG" width="800px" height="300px"></img><br/>  
 
 >**R-CNN vs SPPnet**
 
     -. Spatial Pyramid Pooling(SPP)을 통해 합성곱 신경망(CNN) 계산을 한번만 한다.
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/3.PNG" width="800px" height="200px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/3.PNG" width="800px" height="100px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/SPPnet/4.PNG" width="800px" height="300px"></img><br/>  
 
