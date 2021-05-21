@@ -1,10 +1,9 @@
-# Object Detection API : ssd_mobilenet_v1_coco
+# Object Detection Algorithms
 
-SSD : Single Shot MultiBox Detector
+- R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)
 
-MobileNet : Object Detector released in 2017 as an efficient CNN architecture designed for mobile and embedded vision application
 
-### Introduction
+### R-CNN
 
 **SSD_mobilenet_v1_coco** was described in [Here](https://docs.openvinotoolkit.org/latest/omz_models_model_ssd_mobilenet_v1_coco.html).
 
