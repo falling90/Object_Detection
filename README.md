@@ -113,11 +113,17 @@
           → 만들어낸 Proposal이 Object인지? 아닌지?
           → 실제 Ground Truth 에 맞춰서 좌표값을 Regression 할수있는지 학습하는 Fully Connected Network
         - Fast R-CNN과 합성곱 신경망을 공유
-        - Feature Map의 마지막 Conv 층을 작은 네트워크가 Sliding하여 저차원으로 Mapping
-        - Regression과 Classification 수행
+        - Feature Map의 마지막 Conv 층을 작은 네트워크가 Sliding하여 저차원으로 Mapping (Anchor Box 사용)
         
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
-----------------------------------------------------------------------------------------------------------------------------------------  
+
+    * Anchor Box
+        - 각 Sliding Window 에서 Bounding Box의 후보로 사용되는 상자
+        - Regressoin층 = Anchor Box * 4,  Classification층 = 2k (→ k = Object인지 아닌지를 의미)
+        - Anchor는 Sliding Window 중심에 있고, 미리 정해진 Scale과 비율에 따라 달라진다.
+        - 실험에서는 3개의 Scale, 3개의 비율을 사용하여 k=9개의 앵커 사용.
+        - W*H크기만큼의 Conv Feature Map에서 WHk만큼의 앵커가 있는 것이다.
+
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
 
     * 
