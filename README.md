@@ -2,17 +2,17 @@
 
 >**발전 과정**
 
-  - R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
+- R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
    
 
 ### R-CNN
 >**R-CNN Algorithms**
 
-  ![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/1.PNG?raw=true)  
+![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/1.PNG?raw=true)  
 
-  ![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/2.PNG?raw=true)  
+![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/2.PNG?raw=true)  
 
-	![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/3.PNG?raw=true)  
+![plot](https://github.com/falling90/Object_Detection/blob/main/Reference/Image/R-CNN/3.PNG?raw=true)  
 
 
 >**R-CNN 한계**
