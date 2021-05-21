@@ -62,16 +62,16 @@
     -. 전체 네트워크 업데이트 가능
     -. 저장 공간 불필요
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/1.PNG" width="800px" height="300px"></img><br/>  
 
     * ROI Pooling Layer : ROI 영역에 해당하는 부분만 Max Pooling을 통해 Feature Map으로부터 고정된 길이의 저차원 벡터로 축소
         - 각각의 ROI 는 (r, c, h, w)의 튜플 형태 [(r, c) : Top-Left Corner의 좌표]
         - h*w ROI 사이즈를 H*W의 작은 윈도우 사이즈로 나눔 (h/H * w/W)
         - SPPnet의 SPP Layer의 한 Pyramid Level 만 사용하는 형태는 동일
         
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/2.png" width="800px" height="300px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.png" width="800px" height="300px"></img><br/>  
 
     * 학습 : 기본적으로 ImageNet을 사용한 Pre-Trained Network Base로 진행
     * 변경점
@@ -89,7 +89,7 @@
     -. Single-Stage(Multi-Task)
         - 최종 Classifier와 Regression까지 단방향 단계 [→ 효율적인 학습 (Softmax Classifier + Bounding Box Regressor)]
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.PNG" width="800px" height="100px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="800px" height="100px"></img><br/>  
 
 >**Fast R-CNN 한계**
     
