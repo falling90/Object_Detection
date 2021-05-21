@@ -61,9 +61,6 @@
     -. Single-Stage로 학습 진행
     -. 전체 네트워크 업데이트 가능
     -. 저장 공간 불필요
-    
-    * 학습
-        - FCN을 통해 Object Class를 판별, Bounding Box 조절
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
 
@@ -77,14 +74,14 @@
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="300px"></img><br/>  
 
     * 학습 : 기본적으로 ImageNet을 사용한 Pre-Trained Network Base로 진행
-    * 학습을 위한 변경점
+    * 변경점
         - 마지막 Max Pooling Layer → ROI Pooling Layer로 대체(VGG16에서는 H=W=7)
         - 신경망의 마지막 FC Layer와 Softmax단이 두 개의 Output Layer로 대체(ImageNet : 1000개 분류)
         - 신경망의 입력이 Image와 ROI를 반영할 수 있도록 변경
 
->**R-CNN & SPPnet vs Fast R-CNN**
-
-    -. One-Stage 구조를 통한 효율적인 학습(Softmax Classifier + Bounding Box Regressor)
+>**SPPnet vs Fast R-CNN**
+    -. SPP Layer → ROI Pooling Layer
+    -. One-Stage 구조(Multi-Task)를 통한 효율적인 학습(Softmax Classifier + Bounding Box Regressor)
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
