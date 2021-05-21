@@ -130,7 +130,7 @@
         - 생성된 Anchor Box 에서 NMS을 사용하여 약 2000개의 ROI 생성
         - 2000개의 후보 영역 중 Sampling을 통해 Proposal을 뽑아 Fast R-CNN Detector로 보내 학습 진행
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="300px" height="400px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="300px" height="250px"></img><br/>  
 
     * Translation-Invariant(이동불변성) Anchors
         - RPN에서 Window Size를 Sliding 하는 방식은 이동 불변성 보장
