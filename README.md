@@ -4,18 +4,23 @@
 
 
 ### R-CNN
+**R-CNN**
 
-**SSD_mobilenet_v1_coco** was described in [Here](https://docs.openvinotoolkit.org/latest/omz_models_model_ssd_mobilenet_v1_coco.html).
+![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result1.png?raw=true)
+![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result2.png?raw=true)
+![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result3.png?raw=true)
 
-This code has been tested on Windows 10 64-bit, and on Colaboratory.
 
-It initially described in [Here](https://github.com/tensorflow/models/tree/991f75e200721267302291862cd9bf936ca06f90/research/object_detection).
+**R-CNN 한계**
 
-Model is available at [Here](https://github.com/tensorflow/models).
+- Object Detection 속도 자체가 느림.
 
-TestData is available at [Here](http://download.tensorflow.org/models/object_detection/ssd_mobilenet_v1_coco_2017_11_17.tar.gz).
+- Selective Search 를 통한 검출된 Region Proposals 마다 CNN을 적용하기때문에 시간 多 소요.
 
-It doesn't included any training data (Trained Model included in TestData)
+- 합성곱 신경망(CNN) 입력을 위해 고정된 크기로 변환(Warp/Crop) 하는 과정에서 Image 정보 손실 발생
+
+- 학습이 여러 단계로 이루어져 긴 학습시간과 대용량 저장공간 必.
+
 
 ### Main Results
 ![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result1.png?raw=true)
