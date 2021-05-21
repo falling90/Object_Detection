@@ -2,18 +2,18 @@
 
 >**발전 과정**
 
-- R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)
-
+- R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
+   
 
 ### R-CNN
-**R-CNN Algorithms**
+>**R-CNN Algorithms**
 
 ![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result1.png?raw=true)
 ![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result2.png?raw=true)
 ![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result3.png?raw=true)
 
 
-**R-CNN 한계**
+>**R-CNN 한계**
 
 - Object Detection 속도 자체가 느림.
 
