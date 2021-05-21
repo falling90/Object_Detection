@@ -4,7 +4,7 @@
 
 
 ### R-CNN
-**R-CNN**
+**R-CNN Algorithms**
 
 ![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result1.png?raw=true)
 ![plot](https://github.com/falling90/Object_Detection/blob/main/Result/Result2.png?raw=true)
