@@ -57,6 +57,12 @@
     -. Single-Stage로 학습 진행
     -. 전체 네트워크 업데이트 가능
     -. 저장 공간 불필요
+    
+    * 학습
+        - Input으로 이미지와 Object Proposal 사용
+        - 이미지를 통해 Conv Feature Map 생성
+        - 각 Object Proposal로부터 ROI Pooling Layer를 통해 고정된 Feature Vector 생성
+        - FCN을 통해 Object Class를 판별, Bounding Box 조절
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
