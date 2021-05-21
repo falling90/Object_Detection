@@ -130,7 +130,7 @@
         - 생성된 Anchor Box 에서 NMS을 사용하여 약 2000개의 ROI 생성
         - 2000개의 후보 영역 중 Sampling을 통해 Proposal을 뽑아 Fast R-CNN Detector로 보내 학습 진행
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="300px" height="400px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/4.PNG" width="300px" height="250px"></img><br/>  
 
     * Translation-Invariant(이동불변성) Anchors
         - RPN에서 Window Size를 Sliding 하는 방식은 이동 불변성 보장
@@ -145,6 +145,13 @@
         - 다양한 Scale과 Ratio를 활용한 Anchor를 통해 효율적으로 계산 가능
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/6.PNG" width="800px" height="200px"></img><br/>  
+
+    * 학습
+        - RPN은 Imagenet을 사용하여 학습된 모델로부터 초기화되고, Region Proposal Task를 위해 End to End 학습
+        - 위 단계에서 학습된 RPN을 사용하여 Fast R-CNN 모델의 학습을 진행한다.(초기화는 ImageNet 학습 모델로)
+        - RPN을 다시 한번 학습하는데 공통된 Conv Layer(Fully Convolutional Features)는 고정하고 RPN에만 연결된 층만 학습
+        - 공유된 Conv Layer를 고정시키고, Fast R-CNN을 다시 학습한다.
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/7.png" width="800px" height="400px"></img><br/>  
 
 
 >**Fast R-CNN vs Faster R-CNN**
