@@ -103,11 +103,18 @@
       → 전체 Image를 Convolutional Network 하여 만들어낸 Feature Map을 Region-Proposal Generating 에서 활용
     -. RPN은 End to End로 학습 가능
     -. Object여부와 Bounding Box를 Regress하는 하나의 FCN
+    
+    ※ 어텐션처럼 RPN은 Fast R-CNN이 어디에 주목해야하는지 알려준다.
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/1.PNG" width="800px" height="300px"></img><br/>  
 
-    * 
-        - 
+    * RPN (Region Proposal Networks)
+        - 다양한 사이즈의 Image를 입력값으로 Object Score 와 Object Proposal을 출력
+          → 만들어낸 Proposal이 Object인지? 아닌지?
+          → 실제 Ground Truth 에 맞춰서 좌표값을 Regression 할수있는지 학습하는 Fully Connected Network
+        - Fast R-CNN과 합성곱 신경망을 공유
+        - Feature Map의 마지막 Conv 층을 작은 네트워크가 Sliding하여 저차원으로 Mapping
+        - Regression과 Classification 수행
         
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/2.PNG" width="800px" height="300px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
