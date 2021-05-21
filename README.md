@@ -14,7 +14,9 @@
     4. 각각 CNN 적용을 통해 Feature Map 생성
     5. 추출된 Feature Map 은 Classifiers(SVM)을 통해 분류한다.
     
-    * 학습 : 세 단계로 진행 (Conv Fine Tune → SVM Classification → BB Regression)
+    * 학습
+        - Input으로 Image와 
+        - 세 단계로 진행 (Conv Fine Tune → SVM Classification → BB Regression)
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/1.R-CNN/1.PNG" width="800px" height="300px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
@@ -35,6 +37,7 @@
 ## SPPnet
 >**SPPnet Algorithms**
 
+    -. 이미지를 통해 Conv Feature Map 생성
     -. Spatial Pyramid Pooling(SPP) 활용을 통해 R-CNN의 느린 속도 개선(학습 : 3배, 실적용 : 10~100배)
     -. R-CNN과 같은 구조로 여러 학습 단계가 적용되어야 하고 대용량 저장 공간 필요함.
 
@@ -54,14 +57,12 @@
 >**Fast R-CNN Algorithms**
 
     -. R-CNN & SPPnet 대비 성능 개선 (학습시간 : 9배 / 3배,  실적용 : 213배 / 10배)
+    -. ROI Pooling Layer를 통해 고정된 Feature Vector 생성
     -. Single-Stage로 학습 진행
     -. 전체 네트워크 업데이트 가능
     -. 저장 공간 불필요
     
     * 학습
-        - Input으로 이미지와 Object Proposal 사용
-        - 이미지를 통해 Conv Feature Map 생성
-        - 각 Object Proposal로부터 ROI Pooling Layer를 통해 고정된 Feature Vector 생성
         - FCN을 통해 Object Class를 판별, Bounding Box 조절
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/1.PNG" width="800px" height="500px"></img><br/>  
