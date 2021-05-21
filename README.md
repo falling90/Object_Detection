@@ -80,8 +80,14 @@
         - 신경망의 입력이 Image와 ROI를 반영할 수 있도록 변경
 
 >**SPPnet vs Fast R-CNN**
+    
+    -. Region-wise Sampling → Hierarchical Sampling
+        - SGD 미니배치가 Image에 종속됨(N개의 이미지를 각 R/N ROI개로)
+        - N=2, R=128로도 좋은 학습 결과 확인
+        - 약 64배 빠른 학습 가능(N 이 작을수록 계산복잡도 낮아짐)
     -. SPP Layer → ROI Pooling Layer
-    -. One-Stage 구조(Multi-Task)를 통한 효율적인 학습(Softmax Classifier + Bounding Box Regressor)
+    -. Single-Stage(Multi-Task)
+        - 최종 Classifier와 Regression까지 단방향 단계 [→ 효율적인 학습 (Softmax Classifier + Bounding Box Regressor)]
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/3.PNG" width="800px" height="100px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
