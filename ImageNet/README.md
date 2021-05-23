@@ -7,7 +7,7 @@
 
 >**History**
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/ImageNet/Image/1.PNG" width="800px" height="300px"></img><br/>
+<img src="https://github.com/falling90/Object_Detection/blob/main/ImageNet/Image/1.PNG" width="1000px" height="400px"></img><br/>
 
     -. AlexNet(2012) → ZFNet(2013) → VGGNet(2015) → ResNet(2015)
     
