@@ -7,15 +7,13 @@
 
 >**History**
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/ImageNet/Image/1.PNG" width="1000px" height="400px"></img><br/>
-
     -. AlexNet(2012) → ZFNet(2013) → VGGNet(2015) → ResNet(2015)
     
     1) AlexNet(2012) : 심층 합성곱 신경망을 사용한 ImageNet 분류
     2) ZFNet(2013) : 합성곱 신경망의 시각화
     3) VGGNet(2015) : 대규모 이미지(Large scale) 인식을 위한 초 심층 합성곱 신경망
     4) ResNet(2015) : 이미지 인식을 위한 Deep Residual Learning(심층 잔차 학습)
-   
+<img src="https://github.com/falling90/Object_Detection/blob/main/ImageNet/Image/1.PNG" width="1000px" height="400px"></img><br/>   
 
 ## AlexNet(2012)
 >**R-CNN Algorithms**
