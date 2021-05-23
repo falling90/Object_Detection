@@ -90,7 +90,7 @@
     -. Single-Stage(Multi-Task)
         - 최종 Classifier와 Regression까지 단방향 단계 [→ 효율적인 학습 (Softmax Classifier + Bounding Box Regressor)]
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="800px" height="350px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/3.Fast_R-CNN/4.png" width="1000px" height="500px"></img><br/>  
 
 >**Fast R-CNN 한계**
     
@@ -161,4 +161,4 @@
     -. 빠른 속도와 높은 정확도의 Object Detection을 이루어냄.
 
 ## OverView
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/9.png" width="800px" height="150px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/9.png" width="1000px" height="250px"></img><br/>  
