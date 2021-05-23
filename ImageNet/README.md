@@ -1,11 +1,23 @@
-# Object Detection Algorithms
+# ImageNet
 
->**발전 과정**
+>**ImageNet이란?**
 
-    -. R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
+    -. WordNet 계층 구조 (현재는 명사 만)에 따라 구성된 이미지 데이터베이스로 계층 구조의 각 노드가 수백, 수천 개의 이미지로 표시됨.
+    -. 컴퓨터 비전과 딥 러닝 연구를 발전시키는 데 중요한 역할을 했고, 비상업적 용도로 데이터는 무료로 제공됨.
+
+>**History**
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/ImageNet/Image/1.PNG" width="800px" height="300px"></img><br/>
+
+    -. AlexNet(2012) → ZFNet(2013) → VGGNet(2015) → ResNet(2015)
+    
+    1) AlexNet(2012) : 심층 합성곱 신경망을 사용한 ImageNet 분류
+    2) ZFNet(2013) : 합성곱 신경망의 시각화
+    3) VGGNet(2015) : 대규모 이미지(Large scale) 인식을 위한 초 심층 합성곱 신경망
+    4) ResNet(2015) : 이미지 인식을 위한 Deep Residual Learning(심층 잔차 학습)
    
 
-## R-CNN
+## AlexNet(2012)
 >**R-CNN Algorithms**
 
     1. Segmentation을 통해 초기 Region 생성(유사한 색상으로 매칭)
