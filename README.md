@@ -51,7 +51,7 @@
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/2.SPPnet/3.PNG" width="800px" height="100px"></img><br/>  
 ----------------------------------------------------------------------------------------------------------------------------------------  
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/2.SPPnet/4.PNG" width="800px" height="300px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/2.SPPnet/4.PNG" width="1000px" height="500px"></img><br/>  
 
 ## Fast R-CNN
 >**Fast R-CNN Algorithms**
