@@ -24,7 +24,7 @@
 
 >**AlexNet 특징**
 
-    -. Max Pooling & Overlapped 사용
+    -. Overlapped Max Pooling 방식 사용
     -. Activation Funcion : ReLU(Rectified Linear Unit)
     -. LRN(Local Response Normalization) 적용 (ReLU 함수의 단점을 보완하기 위해 적용)
 <img src="https://github.com/falling90/Object_Detection/blob/main/ImageNet/Image/3.PNG" width="1000px" height="400px"></img><br/>   
