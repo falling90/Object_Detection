@@ -160,5 +160,18 @@
     -. RPN(Region Proposal Network)를 통해 Cost-Free한 Region Proposal 방법론 제안
     -. 빠른 속도와 높은 정확도의 Object Detection을 이루어냄.
 
-## OverView
+## R-CNN OverView
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/4.Faster_R-CNN/9.png" width="1000px" height="250px"></img><br/>  
+
+
+## YOLO v1
+    -. YOLO v1 : You Only Look Once
+
+>**YOLO v1 특징**
+
+    -. Image로부터 한 번에 Class와 Bounding Box를 예측(Fast R-CNN)
+    -. Inference가 굉장히 빠름
+    -. 전체 이미지를 보고 Object Detection을 수행하기 때문에 배경 오류가 적고 일반화 성능이 좋음
+    -. 성능이 낮음(특히 Small Object를 잘 탐지하지 못함
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/1.PNG" width="800px" height="300px"></img><br/>  
