@@ -174,4 +174,10 @@
     -. 전체 이미지를 보고 Object Detection을 수행하기 때문에 배경 오류가 적고 일반화 성능이 좋음
     -. 성능이 낮음(특히 Small Object를 잘 탐지하지 못함
 
+    -. 각 GridCell 마다 정답 Vector를 생성하여야 한다.
+    -. 정답 Vector는 2개의 Bounding Box 를 사용.
+    -. 각 Bounding Box는 5개의 정보 [Confidence Score(1개) + Bounding Box 정보(4개)]로 이루어져있음.
+      → Confidence Score : Bounding Box 內 Object가 포함되어있을 확률
+      → Bounding Box 정보 : 좌측 상단 좌표 2개(x, y) + 크기 정보 2개(width, height)
+
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/1.PNG" width="800px" height="300px"></img><br/>  
