@@ -178,6 +178,6 @@
     -. 정답 Vector는 2개의 Bounding Box 를 사용.
     -. 각 Bounding Box는 5개의 정보 [Confidence Score(1개) + Bounding Box 정보(4개)]로 이루어져있음.
       → Confidence Score : Bounding Box 內 Object가 포함되어있을 확률
-      → Bounding Box 정보 : 좌측 상단 좌표 2개(x, y) + 크기 정보 2개(width, height)
+      → Bounding Box 정보 : B/Box 가운데 좌표 2개(x, y) + 크기 정보 2개(width, height)
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/1.PNG" width="800px" height="300px"></img><br/>  
