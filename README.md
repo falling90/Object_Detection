@@ -181,3 +181,18 @@
       → Bounding Box 정보 : B/Box 가운데 좌표 2개(x, y) + 크기 정보 2개(width, height)
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/1.PNG" width="800px" height="300px"></img><br/>  
+
+>**YOLO v1 Training**
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/2.PNG" width="800px" height="500px"></img><br/>  
+    
+>**YOLO v1 Inference**
+
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/3.PNG" width="800px" height="500px"></img><br/>  
+
+    -. Image로부터 한 번에 Class와 Bounding Box를 예측(Fast R-CNN)
+    
+>**YOLO v1 단점**
+
+    -. 각 Grid Cell마다 2개의 경계 상자를 예측하고 1개의 Class 밖에 가질 수 없기 때문에 가깝게 붙어 있는 물체를 잘 탐지하지 못함.
+    -. 작은 물체를 잘 탐지하지 못하고 Recall 이 낮음
