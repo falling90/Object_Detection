@@ -184,11 +184,11 @@
 
 >**YOLO v1 Training**
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/2.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/2.png" width="800px" height="500px"></img><br/>  
     
 >**YOLO v1 Inference**
 
-<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/3.PNG" width="800px" height="500px"></img><br/>  
+<img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/3.png" width="800px" height="500px"></img><br/>  
 
     -. Image로부터 한 번에 Class와 Bounding Box를 예측(Fast R-CNN)
     
