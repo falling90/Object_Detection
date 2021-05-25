@@ -190,8 +190,6 @@
 
 <img src="https://github.com/falling90/Object_Detection/blob/main/Reference/Image/5.YOLO_v1/3.png" width="800px" height="500px"></img><br/>  
 
-    -. Image로부터 한 번에 Class와 Bounding Box를 예측(Fast R-CNN)
-    
 >**YOLO v1 단점**
 
     -. 각 Grid Cell마다 2개의 경계 상자를 예측하고 1개의 Class 밖에 가질 수 없기 때문에 가깝게 붙어 있는 물체를 잘 탐지하지 못함.
