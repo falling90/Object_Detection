@@ -2,7 +2,7 @@
 
 >**발전 과정**
 
-    -. R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5)   
+    -. R-CNN → SPPnet → Fast R-CNN → Faster R-CNN → YOLO(v1 to v5) → PP-YOLO
    
 
 ## R-CNN
