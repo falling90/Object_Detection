@@ -231,7 +231,8 @@
           → Dimension Cluster와 Direct location prediction을 사용한 결과 약 5%의 성능 향상을 얻음
       
         -. Fine-Grained Features
-          → 작은 물체를 잘 탐지하기 위해 더 높은 해상도를 가진 이전 단계의 Layer를 가져와 Detection을 위한 Output feature map에 Concatenate하여 사용
+          → 작은 물체를 잘 탐지하기 위해 더 높은 해상도를 가진 이전 단계의 Layer를 가져와
+            Detection을 위한 Output feature map에 Concatenate하여 사용
           → Feature Map 변환 후 사용 ([26 by 26 by 512] → [13 by 13 by 2048]
           → 약 1% 성능 향상을 얻음
 
@@ -244,7 +245,8 @@
 
         -. DarkNet
           → VGG-16 기반의 Detection Frameworks는 충분히 좋은 성능을 보이지만 과도하게 복잡하여 DarkNet이라는 새로운 네트워크 구조를 제안
-          → 최종 모델로 19개의 Convolutional Layer와 5개의 Maxpooling Layer를 가진 DarkNet-19를 사용함 [(VGG-16 → DarkNet-19) ==> (30.69 → 5.58 (Billion Operation))]
+          → 최종 모델로 19개의 Convolutional Layer와 5개의 Maxpooling Layer를 가진 DarkNet-19를 사용함
+            [(VGG-16 → DarkNet-19) ==> (30.69 → 5.58 (Billion Operation))]
           → ImageNet 데이터에 대해 72.9%의 Top-1 Accuracy와 91.2% Top-5 Accuracy를 보임
       
 
@@ -278,5 +280,7 @@
 
         -. 결과 : 전체 Class에 대해 19.7 mAP의 성능을 보였고, COCO 데이터셋에 존재하지 않는 156개의 Class에 대해서는 16.0 mAP의 성능을 보임
                   학습데이터에 포함되지 않은 데이터로 성능을 평가했음에도 DPM 보다 성능 우수
+        -. COCO Detection 데이터셋은 많은 동물 데이터를 포함하고 있어,
+           동물과 관련된 새로운 Class에 대해서는 성능이 좋은 반면, 다른 Class에 대해서는 매우 안좋은 성능을 보임
 
         
