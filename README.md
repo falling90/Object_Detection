@@ -200,11 +200,11 @@
     -. Better and Faster!
 
 >**YOLO v2 특징**
-  * 성능 향상(Better)
-    -. Batch Normalization
-      → 모든 Conv Layer에 Batch Norm 적용
-      → Batch Norm을 통해 Regularization 효과를 얻어 Drop-out 제거
-      → mAP 기준 약 2%의 성능 향상을 얻음
+    * 성능 향상(Better)
+        -. Batch Normalization
+          → 모든 Conv Layer에 Batch Norm 적용
+          → Batch Norm을 통해 Regularization 효과를 얻어 Drop-out 제거
+          → mAP 기준 약 2%의 성능 향상을 얻음
     
     -. High Resolution Classifier
       → Yolo v1 = Detection Task의 절반의 해상도로(224 by 224) Classifier 학습
