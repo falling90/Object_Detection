@@ -200,7 +200,8 @@
     -. Better and Faster!
 
 >**YOLO v2 특징**
-    * 성능 향상(Better)
+
+  * 성능 향상(Better)
         -. Batch Normalization
           → 모든 Conv Layer에 Batch Norm 적용
           → Batch Norm을 통해 Regularization 효과를 얻어 Drop-out 제거
