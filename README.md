@@ -248,6 +248,35 @@
           → ImageNet 데이터에 대해 72.9%의 Top-1 Accuracy와 91.2% Top-5 Accuracy를 보임
       
 
-  * Yolo 9000-Stronger:WordTree
+  * Yolo 9000-Stronger 구조
 
-        -. Batch Normalization
+        -. Classification Task 데이터 셋을 활용하여 좀 더 다양한 Class를 예측할 수 있는 Detection Model을 학습할 수 있는 방법
+
+        -. Classification Task 데이터 셋의 Class와 Detection Task 데이터 셋의 Class는 Mutually Exclusive 하지 않음
+        -. 따라서 WordNet의 구조를 트리 형태로 변형하여 사용
+        -. Object Detection에서 모든 개념을 포괄하는 Physical Object를 Root Node로 설정
+        -. 자손 Node로부터 조상 Node까지의 경로가 2개 이상인 경우 가장 짧은 경로를 채택
+        
+        
+  * Yolo 9000-Stronger 실험(Classification)
+
+        -. 1000개의 Class를 갖는 이미지넷 데이터셋을 통해 WordTree를 구축하고 DarkNet을 활용하여 실험 진행
+        -. Tree 구축 후 만약 자손 Node의 Label 값이 1이면 모든 조상 Node의 Label 값도 1로 바꾸어 실험 진행
+        -. Classification은 아래 그림과 같이 Multiple Softmax 방식 활용
+
+        -. 결과 : 369개의 새로운 Class가 추가되었음에도, 1% 미만의 성능 차이를 보임
+
+
+  * Yolo 9000-Stronger 실험(Object Detection)
+
+        -. COCO Detection 데이터 셋과 이미지넷의 상위 9000개 Class에 대한 데이터를 통해 WordTree를 구축한 후 Yolo v2 학습
+        -. 총 9418개의 Class를 갖는 WordTree를 구축하였고, COCO 데이터를 Oversampling하여 이미지넷 데이터 수와의 비율을 4:1로 맞춤
+        -. 실험에는 Output 크기를 줄이기 위해 3개의 Anchor Box를 사용
+        -. Input이 Classification 데이터인 경우 단순히 그 Class에 대한 예측 값이 가장 높은 경계 상자에 대해 Classification Loss를 계산하여 역전파 실시
+        -. 모델의 평가를 위해 이미지넷의 Detection Task 데이터셋을 활용
+        -. 이 데이터는 COCO 데이터셋과 오직 44개의 Class만을 공유하며 나머지 156개의 Class는 COCO 데이터 셋에 존재하지 않음
+
+        -. 결과 : 전체 Class에 대해 19.7 mAP의 성능을 보였고, COCO 데이터셋에 존재하지 않는 156개의 Class에 대해서는 16.0 mAP의 성능을 보임
+                  학습데이터에 포함되지 않은 데이터로 성능을 평가했음에도 DPM 보다 성능 우수
+
+        
