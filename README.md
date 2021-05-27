@@ -208,44 +208,46 @@
           → Batch Norm을 통해 Regularization 효과를 얻어 Drop-out 제거
           → mAP 기준 약 2%의 성능 향상을 얻음
     
-    -. High Resolution Classifier
-      → Yolo v1 = Detection Task의 절반의 해상도로(224 by 224) Classifier 학습
-      → Yolo v2 = Detection Task와 같은 해상도로 Classifier 학습
-      → 약 4% 의 성능 향상을 얻음
+        -. High Resolution Classifier
+          → Yolo v1 = Detection Task의 절반의 해상도로(224 by 224) Classifier 학습
+          → Yolo v2 = Detection Task와 같은 해상도로 Classifier 학습
+          → 약 4% 의 성능 향상을 얻음
       
-    -. Convolutional Anchor Boxes
-      → FC Layer를 삭제하고 Fully Convolution 구조 사용
-      → Anchor Box를 활용해 경계 상자를 예측
-      → 1개의 Center를 갖는 13 by 13 output feature map을 만들기 위해 input image 크기를 416 by 416 으로 조정함
-      → Yolo v1은 7*7*2 총 98개의 경계 상자를 예측한 반면 Anchor box를 사용하는 v2는 13*13*5개의 경계 상자를 도출.
-      → mAP는 소폭 감소(69.5 → 69.2)하였지만, Recall이 크게 향상(81% → 88%)됨.
+        -. Convolutional Anchor Boxes
+          → FC Layer를 삭제하고 Fully Convolution 구조 사용
+          → Anchor Box를 활용해 경계 상자를 예측
+          → 1개의 Center를 갖는 13 by 13 output feature map을 만들기 위해 input image 크기를 416 by 416 으로 조정함
+          → Yolo v1은 7*7*2 총 98개의 경계 상자를 예측한 반면 Anchor box를 사용하는 v2는 13*13*5개의 경계 상자를 도출.
+          → mAP는 소폭 감소(69.5 → 69.2)하였지만, Recall이 크게 향상(81% → 88%)됨.
       
-    -. Dimention Clusters
-      → 미리 정의한 Anchor box를 사용하지 않고 데이터에 맞는 Anchor box를 사용
-      → 데이터에 존재하는 Ground truth box를 이용하여 Clustering 실시
-      → 최대한 Ground truth box와 유사한(IOU가 높은) Anchor box를 찾는 것을 목적으로 함
-      → 총 5개의 Anchor box를 사용
+        -. Dimention Clusters
+          → 미리 정의한 Anchor box를 사용하지 않고 데이터에 맞는 Anchor box를 사용
+          → 데이터에 존재하는 Ground truth box를 이용하여 Clustering 실시
+          → 최대한 Ground truth box와 유사한(IOU가 높은) Anchor box를 찾는 것을 목적으로 함
+          → 총 5개의 Anchor box를 사용
             
-    -. Direct Location Prediction
-      → (x, y)를 특정 Grid Cell 안으로 한정하여 학습 초반 Random Initialization으로 인한 학습의 불안정성을 예방
-      → Dimension Cluster와 Direct location prediction을 사용한 결과 약 5%의 성능 향상을 얻음
+        -. Direct Location Prediction
+          → (x, y)를 특정 Grid Cell 안으로 한정하여 학습 초반 Random Initialization으로 인한 학습의 불안정성을 예방
+          → Dimension Cluster와 Direct location prediction을 사용한 결과 약 5%의 성능 향상을 얻음
       
-    -. Fine-Grained Features
-      → 작은 물체를 잘 탐지하기 위해 더 높은 해상도를 가진 이전 단계의 Layer를 가져와 Detection을 위한 Output feature map에 Concatenate하여 사용
-      → Feature Map 변환 후 사용 ([26 by 26 by 512] → [13 by 13 by 2048]
-      → 약 1% 성능 향상을 얻음
+        -. Fine-Grained Features
+          → 작은 물체를 잘 탐지하기 위해 더 높은 해상도를 가진 이전 단계의 Layer를 가져와 Detection을 위한 Output feature map에 Concatenate하여 사용
+          → Feature Map 변환 후 사용 ([26 by 26 by 512] → [13 by 13 by 2048]
+          → 약 1% 성능 향상을 얻음
 
-    -. Multi-Scale Training
-      → 매 10 batch 마다 Input image의 크기를 바꿔가며 모델 학습
-      → 32씩 크기를 증가시킨 {320, 352, ..., 608}에 대해 학습을 진행함
-      → 이를 통해 모델이 Input size에 대해 강건하게 함.
+        -. Multi-Scale Training
+          → 매 10 batch 마다 Input image의 크기를 바꿔가며 모델 학습
+          → 32씩 크기를 증가시킨 {320, 352, ..., 608}에 대해 학습을 진행함
+          → 이를 통해 모델이 Input size에 대해 강건하게 함.
       
-  * 속도 성능 (Faster)
-    -. DarkNet
-      → VGG-16 기반의 Detection Frameworks는 충분히 좋은 성능을 보이지만 과도하게 복잡하여 DarkNet이라는 새로운 네트워크 구조를 제안
-      → 최종 모델로 19개의 Convolutional Layer와 5개의 Maxpooling Layer를 가진 DarkNet-19를 사용함 [(VGG-16 → DarkNet-19) ==> (30.69 → 5.58 (Billion Operation))]
-      → ImageNet 데이터에 대해 72.9%의 Top-1 Accuracy와 91.2% Top-5 Accuracy를 보임
+  * 속도 성능 (Faster)   
+
+        -. DarkNet
+          → VGG-16 기반의 Detection Frameworks는 충분히 좋은 성능을 보이지만 과도하게 복잡하여 DarkNet이라는 새로운 네트워크 구조를 제안
+          → 최종 모델로 19개의 Convolutional Layer와 5개의 Maxpooling Layer를 가진 DarkNet-19를 사용함 [(VGG-16 → DarkNet-19) ==> (30.69 → 5.58 (Billion Operation))]
+          → ImageNet 데이터에 대해 72.9%의 Top-1 Accuracy와 91.2% Top-5 Accuracy를 보임
       
 
   * Yolo 9000-Stronger:WordTree
-    -. Batch Normalization
+
+        -. Batch Normalization
