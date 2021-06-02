@@ -196,7 +196,7 @@
     -. 작은 물체를 잘 탐지하지 못하고 Recall 이 낮음
 
 ## YOLO v2
-    -. Recall을 올리 고 Localization 개선
+    -. Recall을 올리고 Localization 개선
     -. Better and Faster!
 
 >**YOLO v2 특징**
@@ -283,4 +283,44 @@
         -. COCO Detection 데이터셋은 많은 동물 데이터를 포함하고 있어,
            동물과 관련된 새로운 Class에 대해서는 성능이 좋은 반면, 다른 Class에 대해서는 매우 안좋은 성능을 보임
 
-        
+## YOLO v3
+    -. 조금 느리지만 성능이 더 높은 모델을 만들어보자!
+    
+>**YOLO v3 특징**
+
+    1) Bounding Box & Class Prediction
+      → 역전파 계산식 L2 Loss → L1 Loss 로 변경
+      → 각 Class에 대해 독립적으로 Logistic Regression을 적용하고,
+        Binary Cross Entropy로 Loss를 계산함
+      → 이로 인해 상호 연관된 Class에 대해서 더 잘 예측하고, 하나의 Object에 대해 여러 Clss를 예측함
+      
+    2) Predictions Across Scales
+      → 3개의 다른 크기의 Feature마다 각각 Prediction을 진행함.
+      → 첫 Prediction 이후 더 큰 Feature Map에 대한 Prediction을 위해
+        Up-Sampling과 이전단계의 Layer를 가져와 Concatenation 하여 사용
+      
+    3) DarkNet-53
+      → DarkNet-19를 기반으로 Residual Network의 Shortcut Connection을 활용하고,
+        크기를 늘려 53개의 Convolutional Layer를 가진 네트워크 구조 생성
+      → DarkNet-19 보다는 무겁지만 ResNet-101 or 152보다는 가벼움
+      
+>**YOLO v3 실험 및 단점**
+
+    1) Anchor Box x, y Offset Predictions
+      → Linear Activation을 활용해 다양한 Box의 Width, Height의 x, y offset을
+        기존의 Anchor Box 예측 방식을 사용해서 학습해보았지만
+        오히려 모델의 안정성을 떨어뜨리고 성능이 좋지 않음.
+      
+    2) Linear x, y Prediction instead of Logistic
+      → Logistic 함수 대신 선형 함수로 예측 결과 성능이 좋지 않음.
+      
+    3) Focal Loss
+      → RetinalNet처럼 Class에 "배경"이라는 항목을 추가한 후 Focal Loss를 주는 방식을 사용할 수 있음.
+        (Focal Loss : 배경은 Object에 비해 매우 빈도가 높아 모델이 배경에 대해서만 잘 학습하는 것을
+                      방지하기 위해 Hard Sample과 Easy Sample의 Loss를 다르게 주는 것)
+      
+      → 하지만 YOLO 에서는 Object Score를 따로 계산하기 때문에 큰 의미가 없을 확률이 큼.
+      
+    4) Dual IOU and Truth Assignment
+      → Faster R-CNN과 같이 0.7 이상의 IOU를 Positive Example, 0.3 이하를 Negative Example로
+        취급하는 방식을 사용했지만 성능이 좋지 않음.
