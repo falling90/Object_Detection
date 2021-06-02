@@ -304,7 +304,7 @@
         크기를 늘려 53개의 Convolutional Layer를 가진 네트워크 구조 생성
       → DarkNet-19 보다는 무겁지만 ResNet-101 or 152보다는 가벼움
       
->**YOLO v3 실험 및 단점**
+>**YOLO v3 실험 및 결과**
 
     1) Anchor Box x, y Offset Predictions
       → Linear Activation을 활용해 다양한 Box의 Width, Height의 x, y offset을
